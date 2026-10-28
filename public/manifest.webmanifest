@@ -1,6 +1,6 @@
 {
- "name": "AT Fenstertage",
- "short_name": "AT Fenstertage",
+ "name": "Fenstertagplaner",
+ "short_name": "Fenstertagplaner",
  "description": "Fenstertage und Feiertage in Österreich 2026 bis 2028: Urlaubsplaner für alle 9 Bundesländer, Landespatrone, Arbeitstage, Kalender mit KW, Ostern und Zeitumstellung.",
  "start_url": "/de/",
  "display": "standalone",

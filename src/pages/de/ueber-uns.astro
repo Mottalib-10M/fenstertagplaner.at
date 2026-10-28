@@ -7,8 +7,8 @@ import { srcLink } from '../../lib/helpers';
 import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
 const lang = 'de';
 const path = route('about', lang);
-const title = 'AT Fenstertage: Herausgeber, Quellen und Unabhängigkeit';
-const description = 'Wer AT Fenstertage herausgibt: Radif Partners, unabhängig und ohne Reiseangebote. Woher Feiertage, Landespatrone, Ferientermine und Osterdaten stammen.';
+const title = 'Fenstertagplaner: Herausgeber, Quellen und Unabhängigkeit';
+const description = 'Wer Fenstertagplaner herausgibt: Radif Partners, unabhängig und ohne Reiseangebote. Woher Feiertage, Landespatrone, Ferientermine und Osterdaten stammen.';
 const s = (k: string, t: string) => srcLink(k, lang, t);
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Start', path: route('home', lang) }, { name: 'Über uns', path }])]} breadcrumbs={[{ label: 'Über uns' }]}>

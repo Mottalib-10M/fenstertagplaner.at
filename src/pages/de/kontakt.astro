@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
 import { route } from '../../i18n/routes';
 import { contactPageSchema } from '../../lib/seo';
 const lang = 'de';
-const description = 'Schreiben Sie uns, wenn ein Feiertag, ein Ferientermin oder ein Landespatron nicht stimmt, oder wenn Sie AT Fenstertage auf Ihrer Seite einbinden möchten.';
+const description = 'Schreiben Sie uns, wenn ein Feiertag, ein Ferientermin oder ein Landespatron nicht stimmt, oder wenn Sie Fenstertagplaner auf Ihrer Seite einbinden möchten.';
 ---
 <PageLayout title={`Kontakt zu ${SITE_NAMES[lang]}: Fehler melden, Planer einbinden`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Kontakt', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Kontakt' }]} showAuthor={false}>
   <div class="prose prose-slate max-w-none">
@@ -13,7 +13,7 @@ const description = 'Schreiben Sie uns, wenn ein Feiertag, ein Ferientermin oder
     <h2>Ein Datum scheint falsch</h2>
     <p>Nennen Sie die Seite, das Bundesland, das Jahr und, wenn möglich, die Fundstelle im RIS oder die Kundmachung Ihrer Bildungsdirektion. Wir prüfen an der Quelle und korrigieren innerhalb weniger Tage.</p>
     <h2>Planer einbinden</h2>
-    <p>Betriebsräte, Personalabteilungen, Elternvereine und Lokalzeitungen können AT Fenstertage und die Feiertagsliste kostenlos einbinden: <a href={route('widget', lang)}>Einbinden</a>.</p>
+    <p>Betriebsräte, Personalabteilungen, Elternvereine und Lokalzeitungen können Fenstertagplaner und die Feiertagsliste kostenlos einbinden: <a href={route('widget', lang)}>Einbinden</a>.</p>
     <h2>Was wir nicht leisten</h2>
     <p>Keine Rechtsberatung zu Urlaubsanträgen, keine Auskunft über die schulautonomen Tage einer bestimmten Schule und keine Reisebuchung.</p>
   </div>

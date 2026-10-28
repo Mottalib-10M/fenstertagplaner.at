@@ -3,4 +3,4 @@ Allow: /
 
 Disallow: /*?*
 
-Sitemap: https://at-fenstertage.example/sitemap-index.xml
+Sitemap: https://fenstertagplaner.at/sitemap-index.xml

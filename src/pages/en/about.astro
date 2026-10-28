@@ -7,8 +7,8 @@ import { srcLink } from '../../lib/helpers';
 import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
 const lang = 'en';
 const path = route('about', lang);
-const title = 'AT Fenstertage publisher: who we are and our sources';
-const description = 'Who publishes AT Fenstertage: Radif Partners, independent and selling no travel. Where the holidays, patron saints, school breaks and Easter dates come from.';
+const title = 'Fenstertagplaner publisher: who we are and our sources';
+const description = 'Who publishes Fenstertagplaner: Radif Partners, independent and selling no travel. Where the holidays, patron saints, school breaks and Easter dates come from.';
 const s = (k: string, t: string) => srcLink(k, lang, t);
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path }])]} breadcrumbs={[{ label: 'About' }]}>

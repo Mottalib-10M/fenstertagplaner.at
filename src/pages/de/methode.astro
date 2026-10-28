@@ -9,7 +9,7 @@ import { displayDate } from '../../lib/format';
 const lang = 'de';
 const path = route('method', lang);
 const title = 'Fenstertage berechnen: Methode, Rechtsgrundlagen und Tests';
-const description = 'Wie AT Fenstertage rechnet: 13 Feiertage nach § 7 ARG, Ostern nach Gauß, Landespatrone aus den Schulgesetzen, Schulzeitgesetz, der Optimierer und Tests.';
+const description = 'Wie Fenstertagplaner rechnet: 13 Feiertage nach § 7 ARG, Ostern nach Gauß, Landespatrone aus den Schulgesetzen, Schulzeitgesetz, der Optimierer und Tests.';
 const s = (k: string, t: string) => srcLink(k, lang, t);
 const d = (x: string) => displayDate(x, 'de-AT');
 const p10 = K.optimiere(2027, 'W', 10);
@@ -17,7 +17,7 @@ const at27 = K.arbeitstage(2027, 'W').reduce((a, b) => a + b, 0);
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'Methode', description, path, lang }), breadcrumbSchema([{ name: 'Start', path: route('home', lang) }, { name: 'Methode', path }])]} breadcrumbs={[{ label: 'Methode' }]}>
   <article class="prose prose-slate max-w-none">
-    <h1>Wie AT Fenstertage rechnet</h1>
+    <h1>Wie Fenstertagplaner rechnet</h1>
     <p>Jeder Rechner läuft in Ihrem Browser; Bundesland, Urlaubstage und Schuljahr verlassen Ihr Gerät nicht. Die Regeln stammen aus Bundes- und Landesgesetzen im Rechtsinformationssystem des Bundes (RIS), zuletzt gelesen am {d(K.P.retrieved_at)}.</p>
 
     <h2>Die 13 gesetzlichen Feiertage</h2>

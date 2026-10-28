@@ -9,7 +9,7 @@ import { displayDate } from '../../lib/format';
 const lang = 'en';
 const path = route('method', lang);
 const title = 'Bridge days in Austria: method, legal sources and tests';
-const description = "How AT Fenstertage works: 13 holidays under section 7 ARG, Easter by Gauss, patron saints from provincial school acts, the School Hours Act and our tests.";
+const description = "How Fenstertagplaner works: 13 holidays under section 7 ARG, Easter by Gauss, patron saints from provincial school acts, the School Hours Act and our tests.";
 const s = (k: string, t: string) => srcLink(k, lang, t);
 const d = (x: string) => displayDate(x, 'en-GB');
 const p10 = K.optimiere(2027, 'W', 10);
@@ -17,7 +17,7 @@ const at27 = K.arbeitstage(2027, 'W').reduce((a, b) => a + b, 0);
 ---
 <PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'Method', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'Method', path }])]} breadcrumbs={[{ label: 'Method' }]}>
   <article class="prose prose-slate max-w-none">
-    <h1>How AT Fenstertage calculates</h1>
+    <h1>How Fenstertagplaner calculates</h1>
     <p>Every calculator runs in your browser; your province, leave days and school year never leave your device. The rules come from federal and provincial law in Austria's legal information system (RIS), last read on {d(K.P.retrieved_at)}.</p>
 
     <h2>The 13 statutory holidays</h2>

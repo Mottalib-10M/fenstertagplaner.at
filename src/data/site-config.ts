@@ -1,8 +1,8 @@
 /** Configuration centrale du site (générée par new-site.py). */
-export const SITE_URL = "https://at-fenstertage.example";
-export const SITE_NAMES: Record<string, string> = {"de": "AT Fenstertage", "en": "AT Fenstertage"};
+export const SITE_URL = "https://fenstertagplaner.at";
+export const SITE_NAMES: Record<string, string> = {"de": "Fenstertagplaner", "en": "Fenstertagplaner"};
 // Partie du nom affichée en couleur dans l'en-tête (RECETTE §10.3), « » pour aucune.
-export const BRAND_ACCENT = "Fenstertage";
+export const BRAND_ACCENT = "planer";
 /** Locale des nombres et des dates : allemand d'Autriche (« Jänner ») et anglais britannique. */
 export const NUM_TAGS: Record<string, string> = {"de": "de-AT", "en": "en-GB"};
 export const LANG_TAGS: Record<string, string> = {"de": "de-AT", "en": "en-AT"};
@@ -20,7 +20,7 @@ export const AUTHOR_DESC: Record<string, string> = {"de": "Radif Partners liest 
  *  themes reellement traites par le site, pas une liste de mots-cles : un sujet
  *  declare ici sans page qui le couvre est une declaration fausse. */
 export const KNOWS_ABOUT: Record<string, string[]> = {"de": ["Gesetzliche Feiertage in Österreich (§ 7 ARG)", "Fenstertage und Urlaubsplanung", "Landespatrone der neun Bundesländer", "Sommerzeit und Zeitumstellung in Österreich", "Arbeitstage und Kalenderwochen nach ISO 8601"], "en": ["Statutory public holidays in Austria", "Bridge days and leave planning", "Patron saints' days of the nine Austrian provinces", "Daylight saving time in Austria", "Working days and ISO 8601 week numbers"]};
-export const CONTACT_EMAIL = "kontakt@at-fenstertage.example";
+export const CONTACT_EMAIL = "contact@fenstertagplaner.at";
 export const THEME_COLOR = '#C8102E';
 export const LOGO_SYMBOL = 'FT';
 export const BING_VERIFY_CODE = '';
