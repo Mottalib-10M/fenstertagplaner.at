@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+const lang = 'en';
+---
+<PageLayout title="Editorial policy: sources, testing and corrections" description="Where the holidays, patron saints' days and school breaks come from, the order in which we read sources, how we test, and what happens when we get it wrong." lang={lang} noindex={true} breadcrumbs={[{ label: 'Editorial policy' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Editorial policy and corrections</h1>
+    <p>A wrong holiday costs a leave day, a wrong school break a day of childcare. This page explains where every date comes from and what happens when one is wrong.</p>
+    <h2>Responsibility</h2><p>Content and calculators are the responsibility of {AUTHOR_NAME}. Contact: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Order of sources</h2>
+    <ol>
+      <li><strong>Federal law</strong> as in force on RIS: the Rest Periods Act, the 1957 Public Holiday Rest Act, the Annual Leave Act, the 1985 School Hours Act, the Time Reckoning Act and the summer-time ordinances;</li>
+      <li><strong>Provincial law</strong> on RIS: the school acts of the nine provinces for patron saints' days, and the Lower Austria Constitution for its provincial holiday;</li>
+      <li><strong>Calculation rules</strong>: the Easter formula of Germany's PTB and ISO 8601 week numbers.</li>
+    </ol>
+    <p>Calendar sites, travel portals and newspaper articles are not sources. Where something is not officially fixed, such as which autonomous days a school adopts, we say so plainly.</p>
+    <h2>Computed, not copied</h2><p>No date on this site is typed by hand. An engine derives every holiday and school break from its rule, such as "second Monday in February" or "60 days after Easter". Automated tests compare Easter with a second formula over a thousand years and check bridge days, working days and breaks on every change.</p>
+    <h2>Review cycle</h2><p>A full review at least every {REVIEW_CYCLE_MONTHS} months and after every amendment. New rules go in only once they are published in the federal or provincial law gazette.</p>
+    <h2>When we get something wrong</h2>
+    <ol><li>Check against the source.</li><li>Fix the rule in the engine and add a test.</li><li>Republish the corrected date on every page.</li></ol>
+    <h2>Independence</h2><p>No money from travel firms, hotels or authorities. No affiliate links, no sponsored content, no lead-generation form.</p>
+    <p>See also <a href={route('method', lang)}>method</a>. Version of {displayDate(LAST_UPDATED, 'en-GB')}.</p>
+  </div>
+</PageLayout>

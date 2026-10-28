@@ -1,0 +1,14 @@
+---
+/** L'outil d'une page : un simulateur déclaratif de tool-specs.ts, le calendrier annuel ou le prochain jour férié. */
+import SpecTool from './calc/SpecTool';
+import Kalender from './bt/Kalender';
+import Naechster from './bt/Naechster';
+import { route } from '../i18n/routes';
+import type { Lang } from '../lib/format';
+interface Props { kind: string; lang: Lang; arg?: Record<string, number | string>; idPrefix?: string }
+const { kind, lang, arg, idPrefix = 't' } = Astro.props;
+const methodHref = route('method', lang);
+---
+{kind === 'kalender' ? <Kalender client:load lang={lang} year={Number(arg?.jahr ?? 2027)} land={arg?.land ? String(arg.land) : undefined} methodHref={methodHref} idPrefix={idPrefix} />
+  : kind === 'naechster' ? <Naechster client:load lang={lang} methodHref={methodHref} idPrefix={idPrefix} />
+  : <SpecTool client:load kind={kind} lang={lang} arg={arg ? JSON.stringify(arg) : undefined} methodHref={methodHref} idPrefix={idPrefix} />}

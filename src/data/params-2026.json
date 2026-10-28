@@ -1,0 +1,221 @@
+{
+ "_lisezmoi": "Paramètres datés du site autrichien. Chaque source a été lue sur le RIS (ris.bka.gv.at) le 2026-10-28 ; les dates des fériés sont calculées par src/lib/engine (jamais tapées).",
+ "year": 2026,
+ "retrieved_at": "2026-10-28",
+ "valid_from": "2026-01-01",
+ "valid_to": "2028-12-31",
+ "jahre": [
+  2026,
+  2027,
+  2028
+ ],
+ "urlaub": {
+  "werktage": 30,
+  "werktageAb25": 36,
+  "tageBasis": 6,
+  "verjaehrungJahre": 2
+ },
+ "sommerzeit": [
+  {
+   "von": 2022,
+   "bis": 2026,
+   "bgbl": "58/2022"
+  },
+  {
+   "von": 2027,
+   "bis": 2031,
+   "bgbl": "282/2026"
+  }
+ ],
+ "sources": {
+  "arg7": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008541&Paragraf=7",
+   "label": {
+    "de": "Arbeitsruhegesetz (ARG), § 7: Feiertagsruhe, die 13 Feiertage",
+    "en": "Rest Periods Act (ARG), section 7: the 13 public holidays"
+   }
+  },
+  "arg7a": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008541&Paragraf=7a",
+   "label": {
+    "de": "Arbeitsruhegesetz (ARG), § 7a: persönlicher Feiertag",
+    "en": "Rest Periods Act (ARG), section 7a: personal holiday"
+   }
+  },
+  "arg9": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008541&Paragraf=9",
+   "label": {
+    "de": "Arbeitsruhegesetz (ARG), § 9: Entgelt für Feiertage",
+    "en": "Rest Periods Act (ARG), section 9: pay for public holidays"
+   }
+  },
+  "arg13a": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008541&Paragraf=13a",
+   "label": {
+    "de": "Arbeitsruhegesetz (ARG), § 13a: Sonderregelung für den 8. Dezember",
+    "en": "Rest Periods Act (ARG), section 13a: special rule for 8 December"
+   }
+  },
+  "frg": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008168",
+   "label": {
+    "de": "Feiertagsruhegesetz 1957, § 1",
+    "en": "Public Holiday Rest Act 1957, section 1"
+   }
+  },
+  "nationalfeiertag": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10000426",
+   "label": {
+    "de": "Bundesgesetz über den österreichischen Nationalfeiertag",
+    "en": "Federal Act on the Austrian National Day"
+   }
+  },
+  "urlg2": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008376&Paragraf=2",
+   "label": {
+    "de": "Urlaubsgesetz (UrlG), § 2: Urlaubsausmaß",
+    "en": "Leave Act (UrlG), section 2: length of leave"
+   }
+  },
+  "urlg3": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008376&Paragraf=3",
+   "label": {
+    "de": "Urlaubsgesetz (UrlG), § 3: Anrechnung von Vordienstzeiten",
+    "en": "Leave Act (UrlG), section 3: earlier periods of service"
+   }
+  },
+  "urlg4": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008376&Paragraf=4",
+   "label": {
+    "de": "Urlaubsgesetz (UrlG), § 4: Verbrauch und Verjährung des Urlaubs",
+    "en": "Leave Act (UrlG), section 4: taking leave and limitation"
+   }
+  },
+  "schzg2": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10009575&Paragraf=2",
+   "label": {
+    "de": "Schulzeitgesetz 1985 (SchZG), § 2: Schuljahr, Ferien, schulfreie und schulautonome Tage",
+    "en": "School Hours Act 1985 (SchZG), section 2: school year, breaks and days off"
+   }
+  },
+  "zzg": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10011487",
+   "label": {
+    "de": "Zeitzählungsgesetz, §§ 1 und 2: Normalzeit und Sommerzeit",
+    "en": "Time Reckoning Act, sections 1 and 2: standard time and summer time"
+   }
+  },
+  "sz2226": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011822",
+   "label": {
+    "de": "Verordnung über die Sommerzeit in den Kalenderjahren 2022 bis 2026, BGBl. II Nr. 58/2022",
+    "en": "Ordinance on summer time 2022 to 2026, Federal Law Gazette II No. 58/2022"
+   }
+  },
+  "sz2731": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20013301",
+   "label": {
+    "de": "Verordnung über die Sommerzeit in den Kalenderjahren 2027 bis 2031, BGBl. II Nr. 282/2026",
+    "en": "Ordinance on summer time 2027 to 2031, Federal Law Gazette II No. 282/2026"
+   }
+  },
+  "eu-sommerzeit": {
+   "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32000L0084",
+   "label": {
+    "de": "Richtlinie 2000/84/EG zur Regelung der Sommerzeit",
+    "en": "Directive 2000/84/EC on summer-time arrangements"
+   }
+  },
+  "ostern-ptb": {
+   "url": "https://www.ptb.de/cms/ptb/fachabteilungen/abt4/fb-44/ag-441/darstellung-der-gesetzlichen-zeit/wann-ist-ostern.html",
+   "label": {
+    "de": "Physikalisch-Technische Bundesanstalt: Wann ist Ostern? (Gaußsche Osterformel)",
+    "en": "Physikalisch-Technische Bundesanstalt (PTB): When is Easter? (Gauss formula)"
+   }
+  },
+  "schule-b": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrBgld&Gesetzesnummer=10000390",
+   "label": {
+    "de": "Burgenländisches Pflichtschulgesetz 1995, § 48: schulfrei am 11. November",
+    "en": "Burgenland Compulsory Schools Act 1995, section 48: no school on 11 November"
+   }
+  },
+  "schule-k": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrK&Gesetzesnummer=20000025",
+   "label": {
+    "de": "Kärntner Schulgesetz (K-SchG), § 74: schulfrei am 19. März und 10. Oktober",
+    "en": "Carinthian Schools Act (K-SchG), section 74: no school on 19 March and 10 October"
+   }
+  },
+  "schule-noe": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrNO&Gesetzesnummer=20001200",
+   "label": {
+    "de": "NÖ Pflichtschulgesetz 2018, § 83: schulfrei am 15. November (Landesfeiertag)",
+    "en": "Lower Austria Compulsory Schools Act 2018, section 83: no school on 15 November"
+   }
+  },
+  "noe-lv7": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrNO&Gesetzesnummer=20000038",
+   "label": {
+    "de": "NÖ Landesverfassung 1979, Art. 7 Abs. 6: Landespatron und Landesfeiertag",
+    "en": "Lower Austria Constitution 1979, Art. 7(6): patron saint and provincial day"
+   }
+  },
+  "schule-ooe": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrOO&Gesetzesnummer=10000133",
+   "label": {
+    "de": "Oö. Schulzeitgesetz 1976, § 2: schulfrei am 4. Mai",
+    "en": "Upper Austria School Hours Act 1976, section 2: no school on 4 May"
+   }
+  },
+  "schule-s": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrSbg&Gesetzesnummer=20001174",
+   "label": {
+    "de": "Salzburger Schulzeit-Ausführungsgesetz 2018, § 2: schulfrei am 24. September",
+    "en": "Salzburg School Hours Implementation Act 2018, section 2: no school on 24 September"
+   }
+  },
+  "schule-st": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrStmk&Gesetzesnummer=20000163",
+   "label": {
+    "de": "Steiermärkisches Schulzeit-Ausführungsgesetz 1999, § 2: schulfrei am 19. März",
+    "en": "Styrian School Hours Implementation Act 1999, section 2: no school on 19 March"
+   }
+  },
+  "schule-t": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrT&Gesetzesnummer=20000013",
+   "label": {
+    "de": "Tiroler Schulorganisationsgesetz 1991, § 110: schulfrei am 19. März",
+    "en": "Tyrolean School Organisation Act 1991, section 110: no school on 19 March"
+   }
+  },
+  "schule-v": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrVbg&Gesetzesnummer=20000230",
+   "label": {
+    "de": "Vorarlberger Pflichtschulzeitgesetz, § 3: schulfrei am 19. März",
+    "en": "Vorarlberg Compulsory School Hours Act, section 3: no school on 19 March"
+   }
+  },
+  "schule-w": {
+   "url": "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=LrW&Gesetzesnummer=20000197",
+   "label": {
+    "de": "Wiener Schulgesetz, § 56: schulfrei am 15. November",
+    "en": "Vienna Schools Act, section 56: no school on 15 November"
+   }
+  },
+  "urlg5": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008376&Paragraf=5",
+   "label": {
+    "de": "Urlaubsgesetz (UrlG), § 5: Erkrankung während des Urlaubs",
+    "en": "Leave Act (UrlG), section 5: illness during leave"
+   }
+  },
+  "arg33a": {
+   "url": "https://www.ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10008541&Paragraf=33a",
+   "label": {
+    "de": "Arbeitsruhegesetz (ARG), § 33a Abs. 28 und 29: Ende der Karfreitagsregelung (BGBl. I Nr. 22/2019)",
+    "en": "Rest Periods Act (ARG), section 33a(28) and (29): end of the Good Friday rule (Federal Law Gazette I No. 22/2019)"
+   }
+  }
+ }
+}

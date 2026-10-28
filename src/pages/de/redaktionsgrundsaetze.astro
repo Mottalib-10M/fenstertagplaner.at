@@ -1,0 +1,27 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { AUTHOR_NAME, CONTACT_EMAIL, LAST_UPDATED, REVIEW_CYCLE_MONTHS } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { displayDate } from '../../lib/format';
+const lang = 'de';
+---
+<PageLayout title="Redaktionsgrundsätze: Quellen, Prüfung und Korrekturen" description="Woher Feiertage, Landespatrone und Ferientermine kommen, in welcher Rangfolge wir Quellen lesen, wie wir den Planer testen und was bei einem Fehler geschieht." lang={lang} noindex={true} breadcrumbs={[{ label: 'Redaktionsgrundsätze' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Redaktionsgrundsätze und Korrekturen</h1>
+    <p>Ein falscher Feiertag kostet einen Urlaubstag, ein falscher Ferientermin einen Betreuungstag. Hier steht, woher jedes Datum kommt und was geschieht, wenn eines nicht stimmt.</p>
+    <h2>Verantwortung</h2><p>Inhalte und Rechner verantwortet {AUTHOR_NAME}. Kontakt: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.</p>
+    <h2>Rangfolge der Quellen</h2>
+    <ol>
+      <li><strong>Bundesgesetze</strong> in der geltenden Fassung im RIS: Arbeitsruhegesetz, Feiertagsruhegesetz 1957, Urlaubsgesetz, Schulzeitgesetz 1985, Zeitzählungsgesetz und die Sommerzeitverordnungen;</li>
+      <li><strong>Landesgesetze</strong> im RIS: die Schulgesetze der neun Länder für die Landespatrone und die NÖ Landesverfassung für den Landesfeiertag;</li>
+      <li><strong>Rechenvorschriften</strong>: die Osterformel der Physikalisch-Technischen Bundesanstalt und die Kalenderwoche nach ISO 8601.</li>
+    </ol>
+    <p>Kalenderseiten, Reiseportale und Zeitungsartikel sind keine Quelle. Wo etwas nicht amtlich feststeht, etwa welche schulautonomen Tage eine Schule beschließt, sagen wir das ausdrücklich.</p>
+    <h2>Gerechnet, nicht abgetippt</h2><p>Kein Datum dieser Seite ist von Hand geschrieben. Ein Rechenkern leitet jeden Feiertag und jeden Ferientermin aus seiner Regel ab, etwa „zweiter Montag im Februar“ oder „60 Tage nach Ostern“. Automatische Tests vergleichen Ostern mit einer zweiten Formel für tausend Jahre und prüfen Fenstertage, Arbeitstage und Ferien bei jeder Änderung.</p>
+    <h2>Rhythmus</h2><p>Vollständige Durchsicht mindestens alle {REVIEW_CYCLE_MONTHS} Monate und nach jeder Novelle. Neue Regeln übernehmen wir erst, wenn sie im Bundes- oder Landesgesetzblatt kundgemacht sind.</p>
+    <h2>Umgang mit Fehlern</h2>
+    <ol><li>Prüfung an der Quelle.</li><li>Korrektur der Regel im Rechenkern und ein neuer Test.</li><li>Neues Datum auf allen Seiten.</li></ol>
+    <h2>Unabhängigkeit</h2><p>Kein Geld von Reiseanbietern, Hotels oder Behörden. Keine Partnerlinks, keine bezahlten Beiträge, kein Formular zur Kundengewinnung.</p>
+    <p>Siehe auch <a href={route('method', lang)}>Methode</a>. Fassung vom {displayDate(LAST_UPDATED, 'de-AT')}.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,32 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import LegalIdentity from '../../components/LegalIdentity.astro';
+import { route } from '../../i18n/routes';
+import { AUTHOR_NAME, AUTHOR_DESC, CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
+import { srcLink } from '../../lib/helpers';
+import { profilePageSchema, breadcrumbSchema } from '../../lib/seo';
+const lang = 'en';
+const path = route('about', lang);
+const title = 'AT Fenstertage publisher: who we are and our sources';
+const description = 'Who publishes AT Fenstertage: Radif Partners, independent and selling no travel. Where the holidays, patron saints, school breaks and Easter dates come from.';
+const s = (k: string, t: string) => srcLink(k, lang, t);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[profilePageSchema({ path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'About', path }])]} breadcrumbs={[{ label: 'About' }]}>
+  <article class="prose prose-slate max-w-none">
+    <h1>About {SITE_NAMES[lang]}</h1>
+    <p>{AUTHOR_DESC.en}</p>
+    <h2>Why this site exists</h2>
+    <p>Every autumn many people in Austria book next year's leave and look for the bridge days (Fenstertage). The usual lists name the days but do not say which combination gets the most out of your leave budget, mix patron saints' days with statutory holidays, or skip the fact that Good Friday has not been a holiday since 2019. This site works through each of the nine provinces, keeps statutory holidays apart from days without school, and shows parents where autonomous school days fit.</p>
+    <h2>Who publishes it</h2>
+    <p>The publisher is {AUTHOR_NAME}, a company that builds tools from public rules. {AUTHOR_NAME} is not an authority, an education directorate or a lobby group, has no link with any provincial government and uses no coats of arms. The site sells no trips, hotels or calendars and carries no affiliate links.</p>
+    <LegalIdentity lang={lang} />
+    <h2>Where the data comes from</h2>
+    <p>The holidays are in <Fragment set:html={s('arg7', 'section 7 of the Rest Periods Act')} /> and the <Fragment set:html={s('frg', '1957 Public Holiday Rest Act')} />, the personal holiday in <Fragment set:html={s('arg7a', 'section 7a ARG')} />, and the leave entitlement in the <Fragment set:html={s('urlg2', 'Annual Leave Act')} />. Breaks and autonomous school days follow from the <Fragment set:html={s('schzg2', 'School Hours Act')} />, and patron saints' days from the provinces' school acts, such as the <Fragment set:html={s('schule-w', 'Vienna Schools Act')} />. Easter is computed with the <Fragment set:html={s('ostern-ptb', "PTB's Easter formula")} />, and the clock changes follow the <Fragment set:html={s('sz2731', 'summer-time ordinances')} />. How everything is computed is on the <a href={route('method', lang)}>method</a> page; how we correct mistakes is in the <a href={route('editorial', lang)}>editorial policy</a>.</p>
+    <h2>Your data</h2>
+    <p>Every calculator runs in your browser. The province, leave days and school year you enter are neither sent nor stored. There is no account and no form. Details are in the <a href={route('privacy', lang)}>privacy notice</a>.</p>
+    <h2>What the site does not do</h2>
+    <p>It does not approve leave and does not know your collective agreement. Whether the patron saint's day, 24 or 31 December is off for you is in your contract or service code; which autonomous school days apply is known to your child's school.</p>
+    <h2>Write to us</h2>
+    <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> if a holiday, a school break or a date looks wrong.</p>
+  </article>
+</PageLayout>

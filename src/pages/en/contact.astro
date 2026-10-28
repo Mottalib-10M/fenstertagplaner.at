@@ -1,0 +1,20 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { CONTACT_EMAIL, SITE_NAMES } from '../../data/site-config';
+import { route } from '../../i18n/routes';
+import { contactPageSchema } from '../../lib/seo';
+const lang = 'en';
+const description = "Write to us if a public holiday, a school break or a patron saint's day looks wrong, or if you would like to embed the Austrian bridge-day planner on your site.";
+---
+<PageLayout title={`Contact ${SITE_NAMES[lang]}: report an error, embed the planner`} description={description} lang={lang} noindex={true} jsonLd={[contactPageSchema({ name: 'Contact', description, path: route('contact', lang), lang })]} breadcrumbs={[{ label: 'Contact' }]} showAuthor={false}>
+  <div class="prose prose-slate max-w-none">
+    <h1>Contact</h1>
+    <p>Email: <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. We usually reply within a week.</p>
+    <h2>A date looks wrong</h2>
+    <p>Tell us the page, the province, the year and, if you can, the provision on RIS or your education directorate's notice. We check the source and correct within a few days.</p>
+    <h2>Embed the planner</h2>
+    <p>Works councils, HR departments, parents' associations and local papers can embed the bridge-day planner and the holiday list for free: <a href={route('widget', lang)}>Embed</a>.</p>
+    <h2>What we do not do</h2>
+    <p>No legal advice on leave requests, no information on a particular school's autonomous days and no travel booking.</p>
+  </div>
+</PageLayout>

@@ -1,0 +1,51 @@
+---
+/** Method: holidays under the ARG, Easter, patron saints, school hours, optimiser, tests, limits. Every number from the engine. */
+import PageLayout from '../../layouts/PageLayout.astro';
+import { route } from '../../i18n/routes';
+import { KIT as K } from '../../lib/kit';
+import { srcLink } from '../../lib/helpers';
+import { breadcrumbSchema, webPageSchema } from '../../lib/seo';
+import { displayDate } from '../../lib/format';
+const lang = 'en';
+const path = route('method', lang);
+const title = 'Bridge days in Austria: method, legal sources and tests';
+const description = "How AT Fenstertage works: 13 holidays under section 7 ARG, Easter by Gauss, patron saints from provincial school acts, the School Hours Act and our tests.";
+const s = (k: string, t: string) => srcLink(k, lang, t);
+const d = (x: string) => displayDate(x, 'en-GB');
+const p10 = K.optimiere(2027, 'W', 10);
+const at27 = K.arbeitstage(2027, 'W').reduce((a, b) => a + b, 0);
+---
+<PageLayout title={title} description={description} lang={lang} jsonLd={[webPageSchema({ name: 'Method', description, path, lang }), breadcrumbSchema([{ name: 'Home', path: route('home', lang) }, { name: 'Method', path }])]} breadcrumbs={[{ label: 'Method' }]}>
+  <article class="prose prose-slate max-w-none">
+    <h1>How AT Fenstertage calculates</h1>
+    <p>Every calculator runs in your browser; your province, leave days and school year never leave your device. The rules come from federal and provincial law in Austria's legal information system (RIS), last read on {d(K.P.retrieved_at)}.</p>
+
+    <h2>The 13 statutory holidays</h2>
+    <p>Austria has a single list of holidays for every province: <Fragment set:html={s('arg7', 'section 7(2) of the Rest Periods Act')} />, worded the same as the <Fragment set:html={s('frg', '1957 Public Holiday Rest Act')} />. It names New Year's Day, Epiphany, Easter Monday, 1 May, Ascension Day, Whit Monday, Corpus Christi, the Assumption, 26 October, All Saints' Day, the Immaculate Conception, Christmas Day and St Stephen's Day. National Day also has its <Fragment set:html={s('nationalfeiertag', 'own federal act')} />. A holiday that falls on a Sunday is not replaced (section 7(7)); the calculators show it but do not count it as a bridge.</p>
+    <p>Good Friday has not been a holiday since 2019. It was replaced by the personal holiday under <Fragment set:html={s('arg7a', 'section 7a ARG')} />: you may fix one day of annual leave a year on your own, provided you give written notice three months ahead. The calculator works that deadline out to the day.</p>
+
+    <h2>Easter and movable days</h2>
+    <p>Easter Sunday comes from <Fragment set:html={s('ostern-ptb', "Gauss's Easter formula as published by the PTB")} />. Easter Monday is one day later, Ascension Day 39, Whit Monday 50 and Corpus Christi 60 days later. A second, independent method (Meeus, Jones, Butcher) recomputes every year from 1600 to 2600; the two agree throughout. In 2027 Easter falls on {d(K.ostersonntag(2027))}.</p>
+
+    <h2>Patron saints' days</h2>
+    <p>Patron saints' days are not statutory holidays. Schools close because the provinces' school acts name them: 11 November in Burgenland, 19 March and 10 October in Carinthia, 15 November in Lower Austria and Vienna, 4 May in Upper Austria, 24 September in Salzburg, and 19 March in Styria, Tyrol and Vorarlberg. Employees only get them off where a collective agreement, works agreement or service code says so. That is why the patron saint's day is a switch in every calculator and never built in.</p>
+
+    <h2>School year and autonomous days</h2>
+    <p>School start and the semester, Easter, Whitsun, autumn and summer breaks follow from <Fragment set:html={s('schzg2', 'section 2 of the 1985 School Hours Act')} />. Under subsection 5 the maximum number of autonomous school days depends on the weekday of 26 October. Which days a school actually gives off is its own decision, so the calculator only shows the school days that sit between two days off and suggest themselves, never a supposed list.</p>
+
+    <h2>How the optimiser works</h2>
+    <p>The year is split into blocks: free blocks of weekends and holidays, working blocks of Monday to Friday. Taking a whole working block off merges the free blocks on either side. A dynamic programme tries every combination and picks the one with the most consecutive days off, and on a tie the one using less leave. Each chain must touch a holiday; leave that no longer extends a bridge is left over to plan freely. Example, Vienna 2027: {p10.urlaub} leave days give {p10.frei} days off in {p10.bloecke.length} blocks. Vienna has {at27} working days from Monday to Friday in 2027.</p>
+
+    <h2>Time and countdowns</h2>
+    <p>Countdowns run in Austrian legal time under the <Fragment set:html={s('zzg', 'Time Reckoning Act')} />. Summer time starts and ends on the dates set by ordinances <Fragment set:html={s('sz2226', 'BGBl. II No. 58/2022')} /> and <Fragment set:html={s('sz2731', 'BGBl. II No. 282/2026')} />. Your device converts the time left into your own time zone.</p>
+
+    <h2>Tests</h2>
+    <p>Automated tests check Easter dates, the number of holidays, bridge days 2026 to 2028, working days, the break dates of the School Hours Act, summer time up to 2031 and the personal-holiday deadline on every change. A change only goes live once all of them pass.</p>
+
+    <h2>Limits</h2>
+    <p>The calculators know nothing about company shutdowns, shift rotas or your collective agreement. Christmas Eve and New Year's Eve are working days by law; if you get them off, set that in the planner. A semester break moved under section 2(2a) of the School Hours Act is announced by the education directorate, whose notice prevails.</p>
+
+    <h2>Updates</h2>
+    <p>We reread the law regularly and after every amendment. Report errors on the <a href={route('contact', lang)}>contact page</a>; how we correct them is set out in the <a href={route('editorial', lang)}>editorial policy</a>.</p>
+  </article>
+</PageLayout>
